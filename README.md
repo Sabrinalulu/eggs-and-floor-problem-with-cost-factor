@@ -15,9 +15,9 @@ The operation starts from bottom to top of the building to find the optimal of e
 
 ### Recurrence relation
 We can suppose z to represent the floor we judge, and the minimum cost of worst situation will be:
-C[y][x]= min( C[y][x], 10 + max(C[z-1][x-1]+5,C[y-z][x]) ).
+- C[y][x]= min( C[y][x], 10 + max(C[z-1][x-1]+5,C[y-z][x]) ).
+(if(z=1): C[y][x]= 10+ max( C[z-1][x-1]+5, C[y-z][x]) ).
+
 > Left element: the senario of broken egg. The (z-1) denotes we don't need to test above floors because the egg is broken. 
 > Right element: the senario of unbroken egg. The (y-z) denotes there are still y-z floors we need to test and the number of egg is unchanged.
-
-(if(z=1): C[y][x]= 10+ max( C[z-1][x-1]+5, C[y-z][x]) ).
 
